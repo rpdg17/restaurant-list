@@ -11,14 +11,13 @@ function App() {
   const [ restaurantLists, setRestaurantLists ] = useState<RestaurantGroupedProps[]>([]);
 
   useEffect(() => {
-    // fetch("https://nextjs-orpin-omega-98.vercel.app/api/restaurants")
-    //   .then(res => {
-    //     return res.json();
-    //   })
-    //   .then(data => {
-    //     console.log(data)
-    //   })
-    groupRestaurantsByState(testdata);
+    fetch("https://nextjs-orpin-omega-98.vercel.app/api/restaurants")
+      .then(res => {
+        return res.json();
+      })
+      .then(data => {
+        groupRestaurantsByState(data);
+      })
   }, [])
   
   const groupRestaurantsByState = (data: RestaurantProps[]) => {
