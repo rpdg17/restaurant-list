@@ -38,7 +38,7 @@ function App() {
 
   return (
     <main className='max-w-[1200px] m-auto'>
-      <h1 className="font-[600] text-[30px] mb-10">List of Restaurant Categorized by State</h1>
+      <h1 className="font-[600] text-[30px] mb-10">List of Restaurant Categorized by States</h1>
       <section className="flex flex-wrap gap-y-10">
         {restaurantLists.map((item, index) => (
           <Restaurant_Card data={item} key={index}/>
